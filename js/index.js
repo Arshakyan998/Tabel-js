@@ -307,7 +307,7 @@ p.style.color="red"
 if(input[0].value===""||input[1].value===""||input[2].value===""||input[3].value==="" ){
   
   p.setAttribute('data',"err")
-  p.innerText="Введите все поля"
+  p.innerText="Заполните все поля"
   
   forAdd.appendChild(p)
   return false
