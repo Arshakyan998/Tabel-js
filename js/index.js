@@ -159,7 +159,7 @@ let reverse = {
 };
 
 
-function Reducer(key){
+function SortBy(key){
         let sortBy=arr.reduce((aggr,value)=>{
               aggr.push(value[key])
                 return aggr
@@ -215,7 +215,7 @@ function sortBy(e) {
           }
   }else if(data==="name"){
           if(reverse.name){
-                  drowArr(Reducer("name"))
+                  drowArr(SortBy("name"))
                   reverse={
                           ...reverse,
                           name:false
@@ -226,11 +226,11 @@ function sortBy(e) {
                           name:true
                   }
 
-                  drowArr(Reducer("name").reverse())
+                  drowArr(SortBy("name").reverse())
           }
   }else if(data==="lastName"){
         if(reverse.lastName){
-                drowArr(Reducer("lastName"))
+                drowArr(SortBy("lastName"))
                 reverse={
                         ...reverse,
                         lastName:false
@@ -241,11 +241,11 @@ function sortBy(e) {
                         lastName:true
                 }
 
-                drowArr(Reducer("lastName").reverse())
+                drowArr(SortBy("lastName").reverse())
         }
 }else if(data==="programing"){
         if(reverse.language){
-                drowArr(Reducer("language"))
+                drowArr(SortBy("language"))
                 reverse={
                         ...reverse,
                         language:false
@@ -256,7 +256,7 @@ function sortBy(e) {
                         language:true
                 }
 
-                drowArr(Reducer("language").reverse())
+                drowArr(SortBy("language").reverse())
         }
 }
 }
